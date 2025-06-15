@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+
+*{
+    @apply font-['Arial'];
+}
+.row {
+    @apply mx-[-16px];
+}
+@theme {
+    --color-btnColor: #d5a26f;
+}
