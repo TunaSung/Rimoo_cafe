@@ -7,9 +7,9 @@ function Navbar(){
                 </a>
 
                 <ul className={`gap-3 flex justify-end `}>
-                    {["關於","服務","訂位","菜單","聯絡"].map((item)=>(
+                    {["About", "Service", "Reservation","Menu","Contact"].map((item)=>(
                         <li key={item} className='sm:text-center'>
-                            <a href="#!" className="text-white hover:text-yellow-500 transition duration-300 ">
+                            <a href={`#${item.toLowerCase()}`} className="text-white hover:text-yellow-500 transition duration-300 ">
                                 {item}
                             </a>
                         </li>

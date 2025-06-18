@@ -1,7 +1,7 @@
 function Hero(props){
 
     return(
-        <div id="hero" className="py-50" style={{backgroundColor:`${props.color}`}}>
+        <div id={props.id} className="py-50" style={{backgroundColor:`${props.color}`}}>
            {props.children}
         </div>
     )

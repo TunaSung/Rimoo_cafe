@@ -27,7 +27,7 @@ function Home(){
             {/* End jumbotron */}
 
             {/* Start about */}
-            <Hero color="#fefefe">
+            <Hero id="about" color="#fefefe">
                 <div id="container" className="container mx-auto px-4 w-[75%] flex justify-center items-center">
                     <div id="row" className="grid grid-cols-2 gap-8 items-center">
                         <div id="about-preview">
@@ -46,7 +46,7 @@ function Home(){
             {/* End about */}
 
             {/* End service */}
-            <Hero color="#efefef">
+            <Hero id="service" color="#efefef">
                 <div id="container" className="container mx-auto w-[75%] px-4 flex flex-col justify-center items-center">
                     <div id="service-intro" className="text-center mb-10">
                         <h2 id="title" className="text-5xl text-[#333] mb-12 font-bold">SERVICES</h2>
@@ -86,7 +86,7 @@ function Home(){
             {/* End service */}
 
             {/* Start reservation */}
-            <div className="relative pt-56 pb-40 bg-[url('./assets/images/bg/bg002.jpg')] bg-center bg-cover bg-no-repeat bg-fixed">
+            <div id="reservation" className="relative pt-56 pb-40 bg-[url('./assets/images/bg/bg002.jpg')] bg-center bg-cover bg-no-repeat bg-fixed">
                 <div className="absolute inset-0 bg-black/60"></div>
                 <div id="container" className="container mx-auto px-4 w-3/4 flex justify-center items-center flex-col z-8">
                     <div id="service-intro" className="text-center mb-6 z-2">
@@ -101,7 +101,7 @@ function Home(){
             {/* End reservation */}
 
             {/* Start menu */}
-            <Hero color="#fefefe">
+            <Hero id="menu" color="#fefefe">
                 <div id="container" className="container mx-auto px-4 w-3/4 flex justify-center items-center flex-col ">
                     <div id="service-intro" className="text-center mb-6">
                         <h2 id="title" className="text-5xl text-[#333] mb-6 font-bold">MENU</h2>
@@ -170,7 +170,7 @@ function Home(){
 
 
             {/* Start contact */}
-            <Hero color="#efefef">
+            <Hero id="contact" color="#efefef">
                 <div id="container" className="container mx-auto px-4 w-3/4 flex justify-center items-center flex-col ">
                     <div id="service-intro" className="text-center mb-10">
                         <h2 id="title" className="text-5xl text-[#333] mb-6 font-bold">CONTACT</h2>
@@ -210,9 +210,9 @@ function Home(){
                         <div id="logo" className="w-60 h-60 bg-[url('./assets/images/common/logo-w.png')] bg-no-repeat bg-cover bg-center z-2"></div>
                     </div>
                     <ul className={`relative z-2 gap-10 flex justify-center mt-6`}>
-                        {["關於","服務","訂位","菜單","聯絡"].map((item)=>(
+                        {["About","Service","Reservation","Menu","Contact"].map((item)=>(
                             <li key={item} className='sm:text-center'>
-                                <a href="#!" className="text-white hover:text-yellow-500 transition duration-300 ">
+                                <a href={`#${item.toLowerCase()}`} className="text-white hover:text-yellow-500 transition duration-300 ">
                                     {item}
                                 </a>
                             </li>
